@@ -1,12 +1,21 @@
 import React from "react";
 import Navbar from "./components/navbar";
-import Sidebar from "./components/Sidebar";
+import PlayingVideo from "./components/PlayingVideo";
+import Search from "./components/search";
+import Home from "./components/home";
+import { Route, Routes } from "react-router-dom";
 
-function app() {
+function App() {
   return (
-    <div><Navbar /> 
-    <Sidebar/></div>
-  )
+    <div>
+      <Navbar />
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/search/:searchQuery" element={<Search />} />
+        <Route path="/video/:id" element={<PlayingVideo />} />
+      </Routes>
+    </div>
+  );
 }
 
-export default app;
+export default App;
