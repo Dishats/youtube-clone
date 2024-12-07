@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./components/navbar";
 import PlayingVideo from "./components/PlayingVideo";
-import Search from "./components/search";
+import Search from "./components/Search.jsx";
 import Home from "./components/home";
 import { Route, Routes } from "react-router-dom";
 import { useAuth } from "./context/AuthProvider";
